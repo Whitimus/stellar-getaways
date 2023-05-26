@@ -1,37 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+		<title>Destinations</title>
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+			rel="stylesheet"
+		/>
 
-  01 Pick your destination
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/scripts.js" defer></script>
+	</head>
+	<body class="destination">
+		<header class="primary-header flex">
+			<div class="logo">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<button class="mobile-nav-toggle" aria-controls="primary-navigation">
+				<span class="sr-only" aria-expanded="false">Menu</span>
+			</button>
 
-  Moon
-  Mars
-  Europa
-  Titan
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation underline-indicators flex"
+				>
+					<li class="active">
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">00</span>Home</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="destination.html"
+							><span aria-hidden="true">01</span>Destination</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="crew.html"
+							><span aria-hidden="true">02</span>Crew</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="technology.html"
+							><span aria-hidden="true">03</span>Technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-  Moon
+		<main id="main" class="grid-container grid-container--home">
+			<section>
+				<h2 class="numbered-title"><span>03</span> Interactive elements</h2>
+				<img src="assets/destination/image-moon.png" alt="" />
+			</section>
 
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
+			<section>
+				<!-- Tabs -->
+				<div class="tab-list underline-indicators flex">
+					<button
+						aria-selected="true"
+						class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					>
+						Moon
+					</button>
+					<button
+						aria-selected="false"
+						class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					>
+						Mars
+					</button>
+					<button
+						aria-selected="false"
+						class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					>
+						Europa
+					</button>
+					<button
+						aria-selected="false"
+						class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					>
+						Europa
+					</button>
+				</div>
 
-  Avg. distance
-  384,400 km
+				<div>
+					<h1
+						class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 text-shadow"
+					>
+						<span class="d-block fs-900 ff-serif text-white">Moon</span>
+					</h1>
+					<p class="text-shadow">
+						See our planet as you’ve never seen it before. A perfect relaxing
+						trip away to help regain perspective and come back refreshed. While
+						you’re there, take in some history by visiting the Luna 2 and Apollo
+						11 landing sites.
+					</p>
+					<div class="flex">
+						<p class="fs-200 uppercase ff-sans-cond letter-spacing-3">
+							Avg. Distance
+						</p>
+						<p class="fs-500 ff-serif uppercase">384,400 km</p>
 
-  Est. travel time
-  3 days
-</body>
+						<p class="fs-200 uppercase ff-sans-cond letter-spacing-3">
+							Est. Travel Time
+						</p>
+						<p class="fs-500 ff-serif uppercase">3 Days</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

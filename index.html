@@ -22,52 +22,86 @@
 		/>
 
 		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/scripts.js" defer></script>
 	</head>
-	<body>
-		<header>
+	<body class="home">
+		<a class="skip-to-content" href="#main">Skip to content</a>
+
+		<header class="primary-header flex">
 			<div class="logo">
-				<img src="img/blue white space journey logo.png" alt="" />
+				<img src="img/logo.png" alt="" />
 			</div>
-			<div>
-				<nav>
-					<ul class="primary-navigation underline-indicators flex">
-						<li class="active">
-							<a class="uppercase text-white letter-spacing-2" href="#"
-								><span>01</span>Active</a
-							>
-						</li>
-						<li>
-							<a class="uppercase text-white letter-spacing-2" href="#"
-								><span>02</span>Hovered</a
-							>
-						</li>
-						<li>
-							<a class="uppercase text-white letter-spacing-2" href="#"
-								><span>03</span>Idle</a
-							>
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<button class="mobile-nav-toggle" aria-controls="primary-navigation">
+				<span class="sr-only" aria-expanded="false">Menu</span>
+			</button>
+
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation underline-indicators flex"
+				>
+					<li class="active">
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">00</span>Home</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="destination.html"
+							><span aria-hidden="true">01</span>Destination</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="crew.html"
+							><span aria-hidden="true">02</span>Crew</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-white letter-spacing-2"
+							href="technology.html"
+							><span aria-hidden="true">03</span>Technology</a
+						>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
-		<main>
-			<section class="section--intro">
-				<div class="section--intro__inner uppercase text-white">
-					<h3>The final frontier</h3>
-					<h1>Is here</h1>
-					<p>
-						Ready for the adventure of a lifetime? Welcome to StellarGetaways,
-						where the stars are the limit and your vacation becomes an
-						out-of-this-world experience! Strap in and prepare for the cosmic
-						journey of a lifetime as we whisk you away to the final frontier.
-						From breathtaking lunar landscapes to the gravity-defying thrill of
+		<main id="main" class="grid-container grid-container--home">
+			<div>
+				<h1
+					class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 text-shadow"
+				>
+					Welcome to the final frontier
+					<span class="d-block fs-900 ff-serif text-white">Space</span>
+				</h1>
+				<p class="text-shadow">
+					Ready for the adventure of a lifetime? Welcome to Stellar Getaways,
+					where the stars are the limit and your vacation becomes an
+					out-of-this-world experience! Strap in and prepare for the cosmic
+					journey of a lifetime as we whisk you away to the final frontier.
+					<span class="hide-content" *
+						>From breathtaking lunar landscapes to the gravity-defying thrill of
 						zero-gravity, get ready to embark on a celestial escapade that will
 						leave you starstruck. Don't just dream of the stars, join us at
-						StellarGetaways and let your wanderlust take flight… in space!
-					</p>
-				</div>
-			</section>
+						Stellar Getaways and let your wanderlust take flight… in
+						space!</span
+					>
+				</p>
+			</div>
+
+			<!-- explore button -->
+			<div>
+				<a href="#" class="large-button uppercase ff-serif text-dark bg-white"
+					>Explore</a
+				>
+			</div>
 		</main>
 	</body>
 </html>
