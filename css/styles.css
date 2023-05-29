@@ -396,7 +396,7 @@ select {
 
 .underline-indicators > * {
 	cursor: pointer;
-	padding: var(--underline-gap, 1rem) 0;
+	padding: var(--underline-gap, 0.5rem) 0;
 	border: 0;
 	border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
@@ -524,7 +524,7 @@ body {
 		'content';
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
 	grid-area: image;
 	max-width: 55%;
 }
@@ -545,28 +545,50 @@ body {
 /* Crew Layout  */
 
 .grid-container--crew {
-	--flow-space: 2rem;
+	--flow-space: 1rem;
 	grid-template-areas:
 		'title'
 		'image'
 		'tabs'
 		'content';
 }
-.grid-container--crew > img {
+.grid-container--crew > picture {
 	grid-area: image;
-	max-width: 55%;
+	max-width: 45%;
+	border-bottom: 1px solid hsl(var(--clr-white) / 0.5);
 }
 .grid-container--crew > .dot-indicators {
 	grid-area: tabs;
+}
+.grid-container--crew > .crew-info {
+	padding-top: 2rem;
+	grid-area: content;
+}
+.crew-info5 h2 {
+	color: hsl(var(--clr-white) / 0.5);
 }
 
 @media (min-width: 35em) {
 	.numbered-title {
 		justify-self: start;
+		padding-inline-start: 3rem;
 	}
 	.destination-meta {
 		flex-direction: row;
 		justify-content: space-evenly;
+	}
+	.grid-container--crew {
+		padding-bottom: 0;
+
+		grid-template-areas:
+			'title'
+			'content'
+			'tabs'
+			'image';
+	}
+
+	.grid-container--crew picture {
+		max-width: 60%;
 	}
 }
 @media (min-width: 45em) {
@@ -603,11 +625,33 @@ body {
 			'.image tabs .'
 			'.image content .';
 	}
-	.grid-container--destination > img {
+	.grid-container--destination > picture {
 		max-width: 100%;
 	}
 	.destination-meta {
 		--gap: min(8vw, 6rem);
 		justify-content: start;
+	}
+
+	.grid-container--crew {
+		grid-template-areas:
+			'.title title .'
+			'.content image .'
+			'.tabs image .';
+	}
+	.grid-container--crew > .numbered-title {
+		/* padding-left: 4rem; */
+	}
+	.grid-container--crew > picture {
+		margin-top: 0;
+		max-width: 100%;
+		align-self: end;
+	}
+	.grid-container--crew > .dot-indicators {
+		justify-self: start;
+		padding-inline-start: 3rem;
+	}
+	.grid-container--crew > .crew-info {
+		padding-top: 0;
 	}
 }
